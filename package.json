@@ -1,6 +1,6 @@
 {
   "name": "companies-house-api-es6",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This service will do a companies house lookup for a registered UK company",
   "main": "index.js",
   "scripts": {
