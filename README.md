@@ -9,7 +9,7 @@ Then you will need to include the library
 
 
 ~~~js
-const CHA = require('companies-house-api');
+const CHA = require('companies-house-api-es6');
 const cha = new CHA('YOUR_API_KEY');
 
 ~~~
