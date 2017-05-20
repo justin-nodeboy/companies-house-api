@@ -1,0 +1,22 @@
+{
+  "name": "companies-house-api",
+  "version": "1.0.0",
+  "description": "This service will do a companies house lookup for a registered UK company",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/justin-nodeboy/companies-house-api.git"
+  },
+  "author": "Justin Howard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/justin-nodeboy/companies-house-api/issues"
+  },
+  "homepage": "https://github.com/justin-nodeboy/companies-house-api#readme",
+  "dependencies": {
+    "axios": "^0.16.1"
+  }
+}
