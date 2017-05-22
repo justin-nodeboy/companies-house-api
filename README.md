@@ -27,7 +27,7 @@ cha.searchForCompanyById(companyID).then(result => {
 searchForCompanyById(id)
 
 //These methods can take an optional second argument which 
-is an integer limit of how many results you want back
+//is an integer limit of how many results you want back
 
 searchForCompanyByGenericTerm(query)
 searchAll(query)
