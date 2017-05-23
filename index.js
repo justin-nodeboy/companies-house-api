@@ -1,14 +1,15 @@
 /**
- * Created by Justin on 20/05/2017.
+ * Created by Justin Howard on 20/05/2017.
  */
 const CHS = require('./lib/CompaniesHouseSearchService');
+const CHP = require('./lib/CompaniesHouseProfileService');
 
 class CompaniesHouseApi{
 
     constructor(apiKey){
         this.apiKey = apiKey;
     }
-
+    //#### Search Methods ####//
     /**
      * This method performs a request to Companies House to search for a company by ID
      * @param id
@@ -87,6 +88,26 @@ class CompaniesHouseApi{
         return new Promise(
             (resolve, reject) => {
                 new CHS(this.apiKey).searchForDisqualifiedOfficerBy(q, arguments[1] || 10).then(result => {
+                    resolve(result);
+                }).catch(err => {
+                    reject(err);
+                });
+            }
+        )
+    }
+
+    //#### Profile Methods ####//
+    /**
+     * This method returns the company profile by providing a company number
+     * @param companyNumber
+     * @return {Promise}
+     */
+    returnProfileBy(companyNumber){
+        return new Promise(
+            (resolve, reject) => {
+                if (!companyNumber)
+                    reject('Please include a company number');
+                new CHP(this.apiKey).retrieveCompanyProfileBy(companyNumber).then(result => {
                     resolve(result);
                 }).catch(err => {
                     reject(err);
