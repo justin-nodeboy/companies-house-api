@@ -1,7 +1,7 @@
 # Companies House
 An ES6 Node.js library for the [Companies House BETA API](https://developer.companieshouse.gov.uk/api/docs/index.html)
 # Installation instructions
-Run `npm install --save companies-house-api`
+Run `npm install --save companies-house-api-es6`
 # Usage
 First you will need to create an account on companies house and get an API Key
 
