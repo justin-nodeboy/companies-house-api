@@ -3,6 +3,7 @@
  */
 const CHS = require('./lib/CompaniesHouseSearchService');
 const CHP = require('./lib/CompaniesHouseProfileService');
+const CHG = require('./lib/CompaniesHouseGenericService');
 
 class CompaniesHouseApi{
 
@@ -108,6 +109,21 @@ class CompaniesHouseApi{
                 if (!companyNumber)
                     reject('Please include a company number');
                 new CHP(this.apiKey).retrieveCompanyProfileBy(companyNumber).then(result => {
+                    resolve(result);
+                }).catch(err => {
+                    reject(err);
+                });
+            }
+        )
+    }
+
+    //#### Generic methods ####//
+    getLink(link){
+        return new Promise(
+            (resolve, reject) => {
+                if (!link)
+                    reject('Please include a link to GET');
+                new CHG(this.apiKey).getLink(link).then(result => {
                     resolve(result);
                 }).catch(err => {
                     reject(err);
