@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/justin-nodeboy/companies-house-api#readme",
   "dependencies": {
-    "axios": "^0.19.0"
+    "axios": "^0.21.1"
   }
 }
